@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sounds of Guangzhou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="small-title">CCT360 · LAB 5</p>
+      <h1>Sounds of Guangzhou</h1>
+      <p>A 75-second sound journey through Guangzhou, from a peaceful morning to a rainy evening.</p>
+    </header>
+
+    <section class="picture" id="picture">
+      <img id="sceneImage" src="images/morning.png" alt="Morning beside the Pearl River in Guangzhou">
+      <div class="rain" aria-hidden="true"></div>
+      <div class="caption">
+        <h2 id="sceneTitle">Morning by the Pearl River</h2>
+        <p id="sceneText">Birds, footsteps, and a quiet riverside.</p>
+      </div>
+    </section>
+
+    <section class="player">
+      <h2>Listen to the City</h2>
+      <p>Press play to hear the soundscape. You can also click a button to explore each scene.</p>
+      <audio id="cityAudio" controls preload="metadata">
+        <source src="sounds/guangzhou-soundscape.wav" type="audio/wav">
+        Your browser does not support audio playback.
+      </audio>
+
+      <div class="buttons">
+        <button class="active" onclick="changeScene(0, true)">Morning River</button>
+        <button onclick="changeScene(1, true)">Busy Street</button>
+        <button onclick="changeScene(2, true)">Rainy Evening</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made for CCT360 · HTML, CSS &amp; JavaScript</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
